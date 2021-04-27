@@ -7,16 +7,44 @@ body{
 
 #breakout-room {
     height: 100%;
-    width: 110%; 
+    width: 150%; 
 }
+
+
 
 .header{
     position: fixed;
     height: 50px;
-    background-color: aliceblue;
+    background-color: khaki;
     top: 2%;
     left: 2%;
     display: inline-block;
+}
+
+.header:hover {
+    color:crimson;
+    background-color: beige;
+}
+
+.header .statement {
+    transform: translateY(200%);
+    transition: 777ms;
+}
+
+.statement{
+    background-color: rebeccapurple;
+    color: springgreen;
+    position: fixed;
+    z-index: 77;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.open {
+    transform: translateY(0%) !important;
 }
 
 .idk-yet{
@@ -34,9 +62,10 @@ body{
 
 .icon {
 
-    height: calc(110vw / 5);
-    width: calc(110vw / 5);
+    height: calc(150vw / 5);
+    width: calc(150vw / 5);
     background-color: #68D569;
+    background-color: ghostwhite;
     /* margin: 10px; */
     /* position: relative; */
     border: 1px solid black;
@@ -63,8 +92,18 @@ body{
     width: 100%;
 }
 
-div#17.icon {
-    transition: 777ms;
+.img-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.icon img {
+
+    width: 50%;
+    
 }
 
 .icon:hover {
