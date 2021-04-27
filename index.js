@@ -1,7 +1,6 @@
-const CELLS = 34
-const icons = document.getElementsByClassName('icon');
+//urgh i should use jquery but i don wanna D:
 const details = document.getElementById('details');
-const students = [
+var students = [
     "Lucy Baik", 
     "Natalie Bolton", 
     "Gregory Bond", 
@@ -30,54 +29,34 @@ const students = [
     "Lucia Pabon", 
     "Morgan Recker", 
     "Ivan Reyes", 
-    "Eleanor Schitz", 
+    "Eleanor Schiltz", 
     "Rachel Wui", 
     "Yi Yang", 
     "Sharon Yu", 
     "Fei Ping Zhao"
 ]
+
 //OTHER LINKS:
 //social media 
 //bfa insta
 //bfa thesis show
 
-console.log(icons)
+// console.log(icons)
 
-// const dragStart = e => {
-//     console.log(e.target);
-//     e.dataTransfer.setData('text/plain', e.target.id)
-//     setTimeout(() => {
-//         e.target.classList.add('hide');
-//     }, 0);
 
-// }
-// function sizeIcons(){
-//     let docHieg
-// }
-
-// const move = e => {
-//     console.log(e.sensorEvent.clientX)
-//     // e.clientX = e.sensorEvent.clientX;
-// }
-
-// const place = e => {
-//     console.log(e)
-//     // e.orignalSource.clientLeft = e.cursorOffsetX;
-// }
 function showElement(e) {
     let id = e.target.id
     appendNameDetails(id - 1)
     details.style.display = "block"
-
     
-}
-
-function hideElement() {
-    details.style.display = "none"
 }
 
 function appendNameDetails(i) {
     details.innerHTML = `<p>${students[i]}</p>`
+}
+
+function hideElement() {
+    details.style.display = "none"
 }
 
 
@@ -97,26 +76,49 @@ function shuffle(array) {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-  
     return array;
-  }
+}
 
+function bido() { //start in igbo
+    students = shuffle(students)
+    const icons = document.getElementsByClassName('icon');
+    console.log(Array.from(icons))
 
-Array.from(icons).forEach(function (ele, i){
-    if (i == 16){
-        ele.style.gridArea = "center"
-        ele.style.width = "100%"
-    } else {
-        // const someFun = passIndex(i);
-        ele.style.gridArea = "c" + (i + 1).toString()
-        ele.addEventListener("mouseover", showElement)
-        ele.addEventListener("mouseout", hideElement)
-    }
-
+    Array.from(icons).forEach(function (ele, i){
+        if (i == 16){
+            ele.style.gridArea = "center"
+            ele.style.width = "100%"
+        } else {
+            // const someFun = passIndex(i);
+            let lname = students[i].split(" ").pop();
+            if (lname === "Yu" | lname === "Yang" | lname === "Kim"){
+                lname += students[i].substr(0,1)
+            }
+            console.log(lname)
     
+            ele.style.gridArea = "c" + (i + 1).toString()
+            ele.innerHTML = `
+            <div class="img-contain">
+                <img src="./glyphs/${lname}.png"/>
+            </div>`
+            ele.addEventListener("mouseenter", showElement)
+            ele.addEventListener("mouseleave", hideElement)
+        }
+    })
+}
 
 
-},)
+
+
+
+
+$('.header').click(function(){
+    $('.statement').toggleClass('open')
+})
+
+$( window ).on("load",  bido );
+
+
 
 
 
