@@ -1,3 +1,9 @@
+:root {
+    --page-width: 150%;
+    --page-width-vw: 150vw;
+    --page-width-vh: 150vh;
+}
+
 body{
     height: 100vh;
     width: 100vw;
@@ -7,7 +13,21 @@ body{
 
 #breakout-room {
     height: 100%;
-    width: 150%; 
+    width: var(--page-width); 
+}
+
+@media only screen and (max-width: 480px) {
+    #breakout-room {
+        height: var(--page-width-vh);
+        width: 100%; 
+    }
+
+    #breakout-room .icon {
+        height: calc(var(--page-width-vh) / 5);
+        width: calc(var(--page-width-vh) / 5);
+        border: 1px solid black;
+    }
+
 }
 
 
@@ -15,15 +35,16 @@ body{
 .header{
     position: fixed;
     height: 50px;
-    background-color: khaki;
+    background-color: #001AFE;
     top: 2%;
     left: 2%;
+    color: white;
     display: inline-block;
 }
 
 .header:hover {
-    color:crimson;
-    background-color: beige;
+    color:rgb(233, 231, 231);
+    /* background-color: #5E9AE2; */
 }
 
 .header .statement {
@@ -47,7 +68,7 @@ body{
     transform: translateY(0%) !important;
 }
 
-.idk-yet{
+.name{
     display: none;
     position: fixed;
     top: 50%;
@@ -56,16 +77,22 @@ body{
     width: 300px;
     margin-top: -50px;
     margin-left: -150px;
-    background-color: black;
-    color:bisque;
+    background-color: ghostwhite;
+    color: #001AFE;
+
+}
+
+.name-contain {
+    display: flex;
+    justify-content: center;
 }
 
 .icon {
 
-    height: calc(150vw / 5);
-    width: calc(150vw / 5);
-    background-color: #68D569;
-    background-color: ghostwhite;
+    height: calc(var(--page-width-vw) / 5);
+    width: calc(var(--page-width-vw) / 5);
+    /* background-color: #68D569;
+    background-color: ghostwhite; */
     /* margin: 10px; */
     /* position: relative; */
     border: 1px solid black;
@@ -107,5 +134,22 @@ body{
 }
 
 .icon:hover {
-    background-color: fuchsia;
+    background-color: #68D569;
+}
+
+/* styles for center box that has title 'breakout room' */
+/* use backslash to escape numbers in CSS */
+.center{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center:hover{ 
+    background-color: ghostwhite;
+}
+
+.center img{
+    width: 100%;
+    max-width: 97%;
+    height: auto;
 }

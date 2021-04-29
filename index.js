@@ -35,7 +35,7 @@ var students = [
     "Sharon Yu", 
     "Fei Ping Zhao"
 ]
-
+console.log(students.length)
 //OTHER LINKS:
 //social media 
 //bfa insta
@@ -52,7 +52,11 @@ function showElement(e) {
 }
 
 function appendNameDetails(i) {
-    details.innerHTML = `<p>${students[i]}</p>`
+    details.innerHTML = `
+    <div class="name-contain">    
+        <p>${students[i]}</p>
+    </div>
+    `
 }
 
 function hideElement() {
