@@ -40,10 +40,11 @@ body{
     left: 2%;
     color: white;
     display: inline-block;
+    padding: 17px;
 }
 
 .header:hover {
-    color:rgb(233, 231, 231);
+    color:rgb(167, 167, 167);
     /* background-color: #5E9AE2; */
 }
 
