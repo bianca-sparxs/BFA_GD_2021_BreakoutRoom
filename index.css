@@ -19,12 +19,12 @@ body{
 }
 
 @media only screen and (max-width: 480px) {
-    #breakout-room {
-        height: var(--page-width-vh);
-        width: 100%; 
+    :root {
+        --page-width: 250%;
+        --page-width-vw: 250vw
     }
 
-    #breakout-room .icon {
+    /* #breakout-room .icon {
         height: calc(var(--page-width-vh) / 5);
         width: calc(var(--page-width-vh) / 5);
         border: 1px solid black;
@@ -38,7 +38,7 @@ body{
 
         width: 50%;
         
-    }
+    } */
 
 }
 
