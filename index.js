@@ -36,7 +36,7 @@ var students = [
     "Fei Ping Zhao"
 ]
 
-//b/c i'm lazy, student -> link dictionary as well as student array to keep shuffle func unchanged
+//b/c i'm lazy, {student -> link} dictionary as well as student array to keep shuffle func unchanged
 var studentInfo = [
     {'name': "Lucy Baik", 'link': 'https://breakingout2021.show/Lucy-Baik'}, 
     {'name':"Natalie Bolton", 'link': 'https://breakingout2021.show/Natalie-Bolton'}, 
@@ -126,11 +126,6 @@ function bido() { //start in igbo
     console.log(Array.from(icons))
 
     Array.from(icons).forEach(function (ele, i){
-        // if (i == 16){
-        //     ele.style.gridArea = "center"
-        //     ele.style.width = "100%"
-        // } else {
-            // const someFun = passIndex(i);
             let student = studentInfo.find(s => s.name === students[i])
             let link = student.link
             let lname = students[i].split(" ").pop();
@@ -139,7 +134,6 @@ function bido() { //start in igbo
             }
             console.log(lname)
 
-    
             ele.style.gridArea = "c" + (i + 1).toString()
             ele.innerHTML = `
             <div class="img-contain">
@@ -152,15 +146,10 @@ function bido() { //start in igbo
         // }
     })
 
-
     students.forEach(function (e, i) {
         $('#names').append(`<p class="abt-name">${e}</p>`)
     })
 }
-
-
-
-
 
 
 $('.header').click(function(){

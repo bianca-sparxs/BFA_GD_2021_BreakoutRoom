@@ -30,6 +30,16 @@ body{
         border: 1px solid black;
     }
 
+    .icon{
+        background-color: fuchsia;
+    }
+
+    #breakout-room .icon img {
+
+        width: 50%;
+        
+    }
+
 }
 
 
