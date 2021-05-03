@@ -24,21 +24,14 @@ body{
         --page-width-vw: 250vw
     }
 
-    /* #breakout-room .icon {
-        height: calc(var(--page-width-vh) / 5);
-        width: calc(var(--page-width-vh) / 5);
-        border: 1px solid black;
-    }
-
-    .icon{
-        background-color: fuchsia;
-    }
 
     #breakout-room .icon img {
 
         width: 50%;
+        height: 50%
+
         
-    } */
+    }
 
 }
 
