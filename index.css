@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
 :root {
     --page-width: 150%;
     --page-width-vw: 150vw;
@@ -34,13 +36,20 @@ body{
 
 .header{
     position: fixed;
-    height: 50px;
+    /* height: 50px; */
     background-color: #001AFE;
     top: 2%;
     left: 2%;
     color: white;
     display: inline-block;
-    padding: 17px;
+    padding: 10px;
+
+    font-family: "GlyphWorld-Mountain";
+}
+
+.header .nav-title {
+    margin: 0;
+    font-size: 2.3rem;
 }
 
 .header:hover {
@@ -54,8 +63,8 @@ body{
 }
 
 .statement{
-    background-color: rebeccapurple;
-    color: springgreen;
+    background-color: #68D569;
+    color: black;
     position: fixed;
     z-index: 77;
     bottom: 0;
@@ -63,6 +72,25 @@ body{
     height: 100%;
     width: 100%;
     overflow-y: scroll;
+    
+}
+
+.statement h2 {
+    font-family: 'GlyphWorld-Mountain';
+
+}
+
+.about {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    font-family: "Poppins";
+    font-size: 1rem;
+}
+
+.abt-name {
+    font-size: 0.77rem;
+    margin: 0;
 }
 
 .open {
@@ -74,12 +102,13 @@ body{
     position: fixed;
     top: 50%;
     left: 50%;
-    height: 100px;
-    width: 300px;
+    height: 50px;
+    width: 200px;
     margin-top: -50px;
     margin-left: -150px;
-    background-color: ghostwhite;
+    background-color: white;
     color: #001AFE;
+    font-family: "CircularXXWebTrial-MediumTrial";
 
 }
 
@@ -101,6 +130,11 @@ body{
     /* display:inline-block; */
 }
 
+.icon a {
+    display: flex;
+    justify-content: center;
+}
+
 .hide {
     visibility: hidden;
 }
@@ -112,7 +146,7 @@ body{
     "c1 c2 c3 c4 c5"
     "c6 c7 c8 c9 c10"
     "c11 c12 c13 c14 c15"
-    "c16 center center center c18"
+    "c16 center center c17 c18"
     "c19 c20 c21 c22 c23"
     "c24 c25 c26 c27 c28"
     "c29 c30 c31 c32 c33";
@@ -144,6 +178,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: center;
+    border: 1px solid black;
+    
 }
 .center:hover{ 
     background-color: ghostwhite;
@@ -151,6 +188,38 @@ body{
 
 .center img{
     width: 100%;
-    max-width: 97%;
+    /* max-width: 97%; */
     height: auto;
 }
+
+/* from CSS icon: https://cssicon.space/#/icon/remove */
+.remove.icons {
+    color: #000;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 10px;
+    top: 5%;
+    right: 10%;
+  }
+  
+  .remove.icons:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  .remove.icons:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: currentColor;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  
+  

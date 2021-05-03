@@ -12,7 +12,7 @@ var students = [
     "Eme Lawton", 
     "Angela Lian", 
     "Morgan Moscinski", 
-    "Catherine Neff", 
+    "Shannon Neff", 
     "Noelle No", 
     "Chinwe Oparaji", 
     "Ashley Smalley", 
@@ -35,6 +35,43 @@ var students = [
     "Sharon Yu", 
     "Fei Ping Zhao"
 ]
+
+//b/c i'm lazy, student -> link dictionary as well as student array to keep shuffle func unchanged
+var studentInfo = [
+    {'name': "Lucy Baik", 'link': 'https://breakingout2021.show/Lucy-Baik'}, 
+    {'name':"Natalie Bolton", 'link': 'https://breakingout2021.show/Natalie-Bolton'}, 
+    {'name':"Gregory Bond", 'link': 'https://breakingout2021.show/Gregory-Bond'}, 
+    {'name':"Juan Estela", 'link': 'https://breakingout2021.show/Juan-Estela'},
+    {'name':"Kendall Gregory", 'link': 'https://breakingout2021.show/Kendall-Gregory'}, 
+    {'name':"EK Hong", 'link': 'https://breakingout2021.show/Eun-Kyo-Hong'}, 
+    {'name':"Lena Johnson", 'link': 'https://breakingout2021.show/Lena-Johnson'}, 
+    {'name':"Emily Knobloch", 'link': 'https://breakingout2021.show/Emily-Knobloch'}, 
+    {'name':"Eme Lawton", 'link': 'https://breakingout2021.show/Emerson-Lawton'}, 
+    {'name':"Angela Lian", 'link': 'https://breakingout2021.show/Angela-Lian'}, 
+    {'name':"Morgan Moscinski", 'link': 'https://breakingout2021.show/Morgan-Moscinski'}, 
+    {'name':"Shannon Neff", 'link': 'https://breakingout2021.show/Shannon-Neff'}, 
+    {'name':"Noelle No", 'link': 'https://breakingout2021.show/Noelle-No'}, 
+    {'name':"Chinwe Oparaji", 'link': 'https://breakingout2021.show/Chinwe-Oparaji'}, 
+    {'name':"Ashley Smalley", 'link': 'https://breakingout2021.show/Ashley-Smalley'}, 
+    {'name':"Mariana Velasquez", 'link': 'https://breakingout2021.show/Mariana-Velasquez'}, 
+    {'name':"Anni Yu", 'link': 'https://breakingout2021.show/Anni-Qingyang-Yu'}, 
+    {'name':"Irina Zhikh", 'link': 'https://breakingout2021.show/Irina-Zhikh'},
+    {'name':"Emily Bowen", 'link': 'https://breakingout2021.show/Emily-Bowen-graphic-design'}, 
+    {'name':"Angela Dong", 'link': 'https://breakingout2021.show/Angela-Dong'}, 
+    {'name':"Abby Fenn", 'link': 'https://breakingout2021.show/Abby-Fenn'}, 
+    {'name':"Jaesuk Kim", 'link': 'https://breakingout2021.show/Jae-Suk-Kim'}, 
+    {'name':"Steve Kim", 'link': 'https://breakingout2021.show/Steve-Kim'}, 
+    {'name':"Jay Li", 'link': 'https://breakingout2021.show/Jay-Li'}, 
+    {'name':"Miao Liu", 'link': 'https://breakingout2021.show/Miao-Liu'}, 
+    {'name':"Lucia Pabon", 'link': 'https://breakingout2021.show/Lucia-Pabon'}, 
+    {'name':"Morgan Recker", 'link': 'https://breakingout2021.show/Morgan-Recker'}, 
+    {'name':"Ivan Reyes", 'link': 'https://breakingout2021.show/Ivan-Reyes'}, 
+    {'name':"Eleanor Schiltz", 'link': 'https://breakingout2021.show/Eleanor-Schiltz'}, 
+    {'name':"Rachel Wui", 'link': 'https://breakingout2021.show/Rachel-Wui'}, 
+    {'name':"Yi Yang", 'link': 'https://breakingout2021.show/Yi-Yang'}, 
+    {'name':"Sharon Yu", 'link': 'https://breakingout2021.show/Shuyang-Yu'}, 
+    {'name':"Fei Ping Zhao", 'link': 'https://breakingout2021.show/Fei-Ping-Zhao'}
+]
 console.log(students.length)
 //OTHER LINKS:
 //social media 
@@ -47,7 +84,7 @@ console.log(students.length)
 function showElement(e) {
     let id = e.target.id
     appendNameDetails(id - 1)
-    details.style.display = "block"
+    details.style.display = "inline-block"
     
 }
 
@@ -89,25 +126,35 @@ function bido() { //start in igbo
     console.log(Array.from(icons))
 
     Array.from(icons).forEach(function (ele, i){
-        if (i == 16){
-            ele.style.gridArea = "center"
-            ele.style.width = "100%"
-        } else {
+        // if (i == 16){
+        //     ele.style.gridArea = "center"
+        //     ele.style.width = "100%"
+        // } else {
             // const someFun = passIndex(i);
+            let student = studentInfo.find(s => s.name === students[i])
+            let link = student.link
             let lname = students[i].split(" ").pop();
             if (lname === "Yu" | lname === "Yang" | lname === "Kim"){
                 lname += students[i].substr(0,1)
             }
             console.log(lname)
+
     
             ele.style.gridArea = "c" + (i + 1).toString()
             ele.innerHTML = `
             <div class="img-contain">
-                <img src="./glyphs/${lname}.png"/>
+                <a target="_blank" href="${link}">
+                    <img src="./assets/glyphs/${lname}.png"/>
+                </a>
             </div>`
             ele.addEventListener("mouseenter", showElement)
             ele.addEventListener("mouseleave", hideElement)
-        }
+        // }
+    })
+
+
+    students.forEach(function (e, i) {
+        $('#names').append(`<p class="abt-name">${e}</p>`)
     })
 }
 

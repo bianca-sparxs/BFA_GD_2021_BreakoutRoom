@@ -4,3 +4,7 @@ Boston University Graphic Design 2021 Thesis Exhibition website
 ## Maintainers 
 - Chinwe Oparaji [sparxs@bu.edu]
 - Sharon Yu [sharonyu@bu.edu]
+
+## Typefaces Used
+- Glyph World Moutain
+- Glyph World Forest
