@@ -35,6 +35,12 @@ body{
 
 }
 
+@media only screen and (max-width: 480px) and (hover: none) {
+    .icon:hover {
+        background-color: white; 
+    }
+}
+
 
 
 .header{
@@ -170,6 +176,8 @@ body{
     width: 50%;
     
 }
+
+
 
 .icon:hover {
     background-color: #68D569;

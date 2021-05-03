@@ -137,7 +137,7 @@ function bido() { //start in igbo
             ele.style.gridArea = "c" + (i + 1).toString()
             ele.innerHTML = `
             <div class="img-contain">
-                <a target="_blank" href="${link}">
+                <a href="${link}">
                     <img src="./assets/glyphs/${lname}.png"/>
                 </a>
             </div>`
