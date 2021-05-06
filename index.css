@@ -276,6 +276,10 @@ a:visited {
             transform: rotate(-45deg);
   }
 
+  .smol {
+      width: 77%;
+  }
+
   .abt-poem{
     font-family: 'Poppins';
     font-size: 0.9rem;
