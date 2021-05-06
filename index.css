@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 :root {
     --page-width: 150%;
@@ -44,8 +44,12 @@ a:visited {
         grid-template-columns: 1fr !important;
     }
 
-    .statement .about {
+    .header .statement .about{
         margin: 1em;
+    }
+
+    .header .statement h2 {
+        margin-left: 0.7em;
     }
 
     .about {
@@ -56,13 +60,17 @@ a:visited {
         font-size: 0.7rem !important;
     }
 
+    body .abt-poem{
+        width: 50%;
+    }
+
 }
 
-@media only screen and (max-width: 480px) and (hover: none) {
+/* @media only screen and (max-width: 480px) and (hover: none) {
     .icon:hover {
         background-color: white; 
     }
-}
+} */
 
 
 
@@ -151,7 +159,8 @@ a:visited {
     margin-left: -150px;
     background-color: white;
     color: #001AFE;
-    font-family: "CircularXXWebTrial-MediumTrial";
+    font-family: "Poppins";
+    font-weight: 500;
 
 }
 
@@ -267,9 +276,18 @@ a:visited {
             transform: rotate(-45deg);
   }
 
+  .abt-poem{
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+    color:white;
+    width: 40%;
+    margin-left: 2%;
+}
+
   .a-name{
-      border: 1px solid #001AFE;
-      width: 17%;
+      /* border: 1px solid white; */
+      /* background-color: #001AFE; */
+      width: 33%;
       margin-right: auto;
       margin-left: auto;
   }
@@ -283,10 +301,12 @@ a:visited {
   }
 
   .flex-line p{
-      font-family: 'GlyphWorld-Mountain'
+      font-size: 1.25rem;
+      text-align: center;
   }
 
   .flex-line img {
       width: 73%;
+      height: 73%;
   }
   

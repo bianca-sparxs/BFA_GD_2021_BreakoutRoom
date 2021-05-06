@@ -1,0 +1,28 @@
+body {
+    background-color: #001AFE;
+    font-family: 'GlyphWorld-Mountain';
+    padding-top: 1.5em;
+}
+
+.back-button {
+    position: fixed;
+    top: 1%;
+    left: 2%;
+    
+}
+
+
+
+.back-button a {
+    color: white;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+}
+
+.to-top a {
+    color: white;
+}
