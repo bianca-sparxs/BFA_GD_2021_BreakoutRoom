@@ -38,39 +38,72 @@ var students = [
 
 //b/c i'm lazy, {student -> link} dictionary as well as student array to keep shuffle func unchanged
 var studentInfo = [
-    {'name': "Lucy Baik", 'link': 'https://breakingout2021.show/Lucy-Baik'}, 
-    {'name':"Natalie Bolton", 'link': 'https://breakingout2021.show/Natalie-Bolton'}, 
-    {'name':"Gregory Bond", 'link': 'https://breakingout2021.show/Gregory-Bond'}, 
-    {'name':"Juan Estela", 'link': 'https://breakingout2021.show/Juan-Estela'},
-    {'name':"Kendall Gregory", 'link': 'https://breakingout2021.show/Kendall-Gregory'}, 
-    {'name':"EK Hong", 'link': 'https://breakingout2021.show/Eun-Kyo-Hong'}, 
-    {'name':"Lena Johnson", 'link': 'https://breakingout2021.show/Lena-Johnson'}, 
-    {'name':"Emily Knobloch", 'link': 'https://breakingout2021.show/Emily-Knobloch'}, 
-    {'name':"Eme Lawton", 'link': 'https://breakingout2021.show/Emerson-Lawton'}, 
-    {'name':"Angela Lian", 'link': 'https://breakingout2021.show/Angela-Lian'}, 
-    {'name':"Morgan Moscinski", 'link': 'https://breakingout2021.show/Morgan-Moscinski'}, 
-    {'name':"Shannon Neff", 'link': 'https://breakingout2021.show/Shannon-Neff'}, 
-    {'name':"Noelle No", 'link': 'https://breakingout2021.show/Noelle-No'}, 
-    {'name':"Chinwe Oparaji", 'link': 'https://breakingout2021.show/Chinwe-Oparaji'}, 
-    {'name':"Ashley Smalley", 'link': 'https://breakingout2021.show/Ashley-Smalley'}, 
-    {'name':"Mariana Velasquez", 'link': 'https://breakingout2021.show/Mariana-Velasquez'}, 
-    {'name':"Anni Yu", 'link': 'https://breakingout2021.show/Anni-Qingyang-Yu'}, 
-    {'name':"Irina Zhikh", 'link': 'https://breakingout2021.show/Irina-Zhikh'},
-    {'name':"Emily Bowen", 'link': 'https://breakingout2021.show/Emily-Bowen-graphic-design'}, 
-    {'name':"Angela Dong", 'link': 'https://breakingout2021.show/Angela-Dong'}, 
-    {'name':"Abby Fenn", 'link': 'https://breakingout2021.show/Abby-Fenn'}, 
-    {'name':"Jaesuk Kim", 'link': 'https://breakingout2021.show/Jae-Suk-Kim'}, 
-    {'name':"Steve Kim", 'link': 'https://breakingout2021.show/Steve-Kim'}, 
-    {'name':"Jay Li", 'link': 'https://breakingout2021.show/Jay-Li'}, 
-    {'name':"Miao Liu", 'link': 'https://breakingout2021.show/Miao-Liu'}, 
-    {'name':"Lucia Pabon", 'link': 'https://breakingout2021.show/Lucia-Pabon'}, 
-    {'name':"Morgan Recker", 'link': 'https://breakingout2021.show/Morgan-Recker'}, 
-    {'name':"Ivan Reyes", 'link': 'https://breakingout2021.show/Ivan-Reyes'}, 
-    {'name':"Eleanor Schiltz", 'link': 'https://breakingout2021.show/Eleanor-Schiltz'}, 
-    {'name':"Rachel Wui", 'link': 'https://breakingout2021.show/Rachel-Wui'}, 
-    {'name':"Yi Yang", 'link': 'https://breakingout2021.show/Yi-Yang'}, 
-    {'name':"Sharon Yu", 'link': 'https://breakingout2021.show/Shuyang-Yu'}, 
-    {'name':"Fei Ping Zhao", 'link': 'https://breakingout2021.show/Fei-Ping-Zhao'}
+    {'name': "Lucy Baik", 'link': 'https://breakingout2021.show/Lucy-Baik', 
+    'line':'To be continued'}, 
+    {'name':"Natalie Bolton", 'link': 'https://breakingout2021.show/Natalie-Bolton', 
+    'line':'Despite it all, we still create :’)'}, 
+    {'name':"Gregory Bond", 'link': 'https://breakingout2021.show/Gregory-Bond', 
+    'line':'Making unforgettable memories together'}, 
+    {'name':"Juan Estela", 'link': 'https://breakingout2021.show/Juan-Estela', 
+    'line':'From doubt to certainty (and sometimes back to doubt)'},
+    {'name':"Kendall Gregory", 'link': 'https://breakingout2021.show/Kendall-Gregory',
+     'line':'side by side we persevered '}, 
+    {'name':"EK Hong", 'link': 'https://breakingout2021.show/Eun-Kyo-Hong', 
+    'line':'finally here after late nights and countless cups of coffee'}, 
+    {'name':"Lena Johnson", 'link': 'https://breakingout2021.show/Lena-Johnson', 
+    'line':'Revealing beauty in the darkness'}, 
+    {'name':"Emily Knobloch", 'link': 'https://breakingout2021.show/Emily-Knobloch', 
+    'line':'Discovering what design can do'}, 
+    {'name':"Eme Lawton", 'link': 'https://breakingout2021.show/Emerson-Lawton', 
+    'line':'Through collective growing pains'}, 
+    {'name':"Angela Lian", 'link': 'https://breakingout2021.show/Angela-Lian', 
+    'line':'Learning my worth, this is my rebirth'}, 
+    {'name':"Morgan Moscinski", 'link': 'https://breakingout2021.show/Morgan-Moscinski', 
+    'line':'To gather, grow and generate'}, 
+    {'name':"Shannon Neff", 'link': 'https://breakingout2021.show/Shannon-Neff', 
+    'line':'Finding our way through ups and downs'}, 
+    {'name':"Noelle No", 'link': 'https://breakingout2021.show/Noelle-No', 
+    'line':'understanding myself in the most genuine way'}, 
+    {'name':"Chinwe Oparaji", 'link': 'https://breakingout2021.show/Chinwe-Oparaji', 
+    'line':'And ambition tried to overcome me'}, 
+    {'name':"Ashley Smalley", 'link': 'https://breakingout2021.show/Ashley-Smalley', 
+    'line':'Making incredible memories and art'}, 
+    {'name':"Mariana Velasquez", 'link': 'https://breakingout2021.show/Mariana-Velasquez', 
+    'line':'Innovating, growing, and designing together and apart'}, 
+    {'name':"Anni Yu", 'link': 'https://breakingout2021.show/Anni-Qingyang-Yu', 
+    'line':'Seeing our works shine with sweats and tears'}, 
+    {'name':"Irina Zhikh", 'link': 'https://breakingout2021.show/Irina-Zhikh', 
+    'line':'and in looking back I see nothing to regret and little to correct'},
+    {'name':"Emily Bowen", 'link': 'https://breakingout2021.show/Emily-Bowen-graphic-design', 
+    'line':'A semester of exploration of design, memory, and self '}, 
+    {'name':"Angela Dong", 'link': 'https://breakingout2021.show/Angela-Dong', 
+    'line':'A moment in time, a space in between, and more to come'}, 
+    {'name':"Abby Fenn", 'link': 'https://breakingout2021.show/Abby-Fenn', 
+    'line':'Relying on instinct and inspiration '}, 
+    {'name':"Jaesuk Kim", 'link': 'https://breakingout2021.show/Jae-Suk-Kim', 
+    'line':'Leaping my foot, On my own stage, Just to prove myself.'}, 
+    {'name':"Steve Kim", 'link': 'https://breakingout2021.show/Steve-Kim', 
+    'line':'As my very first step'}, 
+    {'name':"Jay Li", 'link': 'https://breakingout2021.show/Jay-Li', 
+    'line':'I devised a plan to see more sunrises than I’d like'}, 
+    {'name':"Miao Liu", 'link': 'https://breakingout2021.show/Miao-Liu', 
+    'line':'What is coming is even better than what is gone.'}, 
+    {'name':"Lucia Pabon", 'link': 'https://breakingout2021.show/Lucia-Pabon', 
+    'line':'Bringing different worlds together'}, 
+    {'name':"Morgan Recker", 'link': 'https://breakingout2021.show/Morgan-Recker', 
+    'line':'I look behind me and smile'}, 
+    {'name':"Ivan Reyes", 'link': 'https://breakingout2021.show/Ivan-Reyes', 
+    'line':''}, 
+    {'name':"Eleanor Schiltz", 'link': 'https://breakingout2021.show/Eleanor-Schiltz', 
+    'line':'I find company and growth in unexpected places'}, 
+    {'name':"Rachel Wui", 'link': 'https://breakingout2021.show/Rachel-Wui', 
+    'line':'unpredictability and excitement in the moment'}, 
+    {'name':"Yi Yang", 'link': 'https://breakingout2021.show/Yi-Yang', 
+    'line':'Working on in spite of the year,'}, 
+    {'name':"Sharon Yu", 'link': 'https://breakingout2021.show/Shuyang-Yu', 
+    'line':'and we can inspire the whole world.'}, 
+    {'name':"Fei Ping Zhao", 'link': 'https://breakingout2021.show/Fei-Ping-Zhao', 
+    'line':'Fastest moments, but most memorable times'}
 ]
 console.log(students.length)
 //OTHER LINKS:
@@ -123,6 +156,7 @@ function shuffle(array) {
 function bido() { //start in igbo
     students = shuffle(students)
     const icons = document.getElementsByClassName('icon');
+    const lines = document.getElementsByClassName('a-name');
     console.log(Array.from(icons))
 
     Array.from(icons).forEach(function (ele, i){
@@ -148,6 +182,22 @@ function bido() { //start in igbo
 
     students.forEach(function (e, i) {
         $('#names').append(`<p class="abt-name">${e}</p>`)
+    })
+
+    Array.from(lines).forEach(function (e, i ){
+        let student = studentInfo.find(s => s.name === students[i])
+        let line = student.line
+        let lname = students[i].split(" ").pop();
+        if (lname === "Yu" | lname === "Yang" | lname === "Kim"){
+            lname += students[i].substr(0,1)
+        }
+
+        e.innerHTML = `
+        <div class="flex-line">
+            <p>${line}</p>
+            <img src="./assets/glyphs/${lname}.png"/>
+        </div>`
+
     })
 }
 

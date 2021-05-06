@@ -13,24 +13,47 @@ body{
     padding: 0;
 }
 
+a {
+    color: #001AFE;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #001AFE;
+}
 #breakout-room {
     height: 100%;
     width: var(--page-width); 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 550px) {
     :root {
         --page-width: 250%;
         --page-width-vw: 250vw
     }
 
-
     #breakout-room .icon img {
-
         width: 50%;
-        height: 50%
+        height: 50%  
+    }
 
-        
+    .name-list {
+        grid-template-columns: 1fr !important;
+    }
+
+    .statement .about {
+        margin: 1em;
+    }
+
+    .about {
+        font-size: 0.8rem !important;
+    }
+
+    .name-list .abt-name {
+        font-size: 0.7rem !important;
     }
 
 }
@@ -58,7 +81,7 @@ body{
 
 .header .nav-title {
     margin: 0;
-    font-size: 2.3rem;
+    font-size: 1.3rem;
 }
 
 .header:hover {
@@ -85,16 +108,27 @@ body{
 }
 
 .statement h2 {
+    margin-left: 2em;
     font-family: 'GlyphWorld-Mountain';
 
 }
 
 .about {
-    margin: 2em;
+    margin: 3em;
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 60% 1fr;
+    grid-gap: 23px;
     font-family: "Poppins";
     font-size: 1rem;
+}
+
+.about p {
+    margin-top: 0;
+}
+
+.name-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .abt-name {
@@ -216,7 +250,7 @@ body{
   .remove.icons:before {
     content: '';
     position: absolute;
-    width: 15px;
+    width: 25px;
     height: 1px;
     background-color: currentColor;
     -webkit-transform: rotate(45deg);
@@ -226,11 +260,33 @@ body{
   .remove.icons:after {
     content: '';
     position: absolute;
-    width: 15px;
+    width: 25px;
     height: 1px;
     background-color: currentColor;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
-  
+
+  .a-name{
+      border: 1px solid #001AFE;
+      width: 17%;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .flex-line {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      padding: 7px;
+  }
+
+  .flex-line p{
+      font-family: 'GlyphWorld-Mountain'
+  }
+
+  .flex-line img {
+      width: 73%;
+  }
   
